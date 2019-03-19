@@ -1,0 +1,9 @@
+使用说明：
+   1）打包 mvn clean package -P{env}   env:local,test,prod
+   2）打包后在agent项目的target里拷贝agent-1.0.0.zip到指定目录，解压即可
+   3）在项目的启动脚本里增加此agent，
+     参考：java -javaagent:jf-zipkin-agent-1.0-SNAPSHOT.jar=serviceName=study-client -jar xxx.jar  必须指定服务名称serviceName
+
+优化点：
+   1）和http链路打通
+
